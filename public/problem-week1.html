@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>第一周</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<p>Update: 2015-05-25</p>
+<p>　　　　　　</p>
+<h1 align="center">第一周：输入/输出控制</h1>
+<p align="right">by zhengdongjian2013@gmail.com</p>
+<h3>首先，对程序输入/输出的控制能力非常重要(Java中更甚，Java将流的概念利用到了极致!)。因此本周一~周五，就练习一下简单的输入/输出格式控制。这几题全部都是A+B Problem，题面也很好理解。希望能掌握基本的scanf/cin和printf/cout的控制姿势。(课上老师也许讲过诸如文件IO，EOF等，然而没有实践过或者应用过，几乎所有同学应该都是“哦，这样啊!我懂了！”的反应，然而却很难体会到其真切含义。。。）</h3>
+<hr />
+<p>Online Judge通过输入/输出的重定向来完成将文件流转化为标准输入/输出，在这里简单介绍一下。</p>
+<p>就PC(Personal Computer)而言，屏幕显示就是标准输出，键盘的点按就是标准输入，对应地，显示器（或者叫监视器）就叫标准输出设备，键盘就叫标准输入设备。当然，打印机、扬声器都是输出设备，鼠标、触摸板等都是输入设备。</p>
+<p>那么什么是输入/输出重定向呢？
+程序运行时要求的输入除了来自键盘，还可以来自其他设备，甚至包括文件！也就是说，程序可以接受来自键盘的数据外，还可以从文件里读取数据。输入重定向便是将来自其他文件的数据当做来自键盘输入的数据发给程序。stdio.h/cstdio中的函数freopen就可以完成这个功能(test1.cpp)：</p>
+<pre><code>#include &lt;cstdio&gt;
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    freopen(&quot;data.txt&quot;, &quot;r&quot;, stdin);
+
+    int a;
+    cin &gt;&gt; a;
+    cout &lt;&lt; (a * 2) &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+
+<p>其中同目录下还有一个文件data.txt，内容为：</p>
+<pre><code>28
+</code></pre>
+
+<p>在dev中打开test1.cpp，F11编译运行，可以发现，你并没有输入任何内容，但是程序却好像任然被输入了一个数28，并且在黑框中打印了结果28*2=56.似不似很神奇o_O</p>
+<p>上面的程序将同目录下的文件data.txt中的内容当做键盘输入的数据发送给程序，于是程序后面的部分只需要通过cin/scanf来进行读取就可以了。</p>
+<p>输出重定向也是一样一样的~~~</p>
+<p>在OJ上，这一步是OJ帮你做了，因此你只需要写：</p>
+<pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int a;
+    cin &gt;&gt; a;
+    cout &lt;&lt; (a * 2) &lt;&lt; endl;
+
+    return 0;
+}
+</code></pre>
+
+<h2>OJ会自动帮你完成从一个文件中发送数据给你的程序，并且将你程序输出的结果拦截下来，传入另一个文件，最后只需要对比正确答案的文件和你程序生成的文件内容是否一致即可。</h2>
+<p>本周作业：hdu1089~hdu1096，共8题；hdu1049，共1题。</p>
+<p>附题目链接：</p>
+<ul>
+<li>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1089">HDU1089 A+B for Input-Output Practice (I)</a> </p>
+</li>
+<li>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1090">HDU1090 A+B for Input-Output Practice (II)</a></p>
+</li>
+<li>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1091">HDU1091 A+B for Input-Output Practice (III)</a></p>
+</li>
+<li>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1092">HDU1092 A+B for Input-Output Practice (IV)</a></p>
+</li>
+<li>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1093">HDU1093 A+B for Input-Output Practice (V)</a></p>
+</li>
+<li>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1094">HDU1094 A+B for Input-Output Practice (VI)</a></p>
+</li>
+<li>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1095">HDU1095 A+B for Input-Output Practice (VII)</a></p>
+</li>
+<li>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1096">HDU1096 A+B for Input-Output Practice (VIII)</a></p>
+</li>
+<li>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1049">HDU1049 Climbing Worm</a></p>
+</li>
+</ul>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Generator Unicode!
+		</title>
+	<head>
+	
+	<body>
+		<h1>
+			Generator Unicode Char!
+		</h1>
+		<br />
+
+		<input id="from"/> TO <input id="to">
+		<button id="generate" onclick="foo()">Generate!</button>
+		<br />
+		<p id="result"></p>
+		<script type="text/javascript">
+			function foo() {
+				var from = document.getElementById("from").value;
+				var to = document.getElementById("to").value;
+				if (!from && !to) {
+					alert("Warning: Please Input The Range!");
+					return;
+				} else {
+					var res = new String();
+					if (!from || !to) {
+						res = (from ? from : to) + ": " + String.fromCharCode(from ? from : to) + "<br />";
+					} else {
+						if (from > to) {
+							var tmp = from;
+							from = to;
+							to = tmp;
+						}
+						var arr = new Array();
+						var j = 0;
+						for (var i = from; i <= to; ++i) {
+							arr[j++] = i + ": " + String.fromCharCode(i) + " ";
+							if ((i - from) % 5 == 4) {
+								arr[j++] = "<br />";
+							}
+						}
+						res = arr.join("");
+					}
+					document.getElementById("result").innerHTML = res;
+				}
+			}
+		</script>
+		<a href="http://45.62.112.142:3000" alt="homePage">回到主页</a>
+	</body>
+
+</html>
