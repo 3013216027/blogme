@@ -1,6 +1,14 @@
 <link rel="stylesheet" href="/stylesheets/flipclock.css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="/javascripts/flipclock.js"></script>		
+<script src="/javascripts/flipclock.js"></script>
+<script>
+  <!-- for my exam ... -->
+  var final = new Date();
+  if (final.getMonth() <= 6 || final.getDate() <= 8) {
+    alert("考试啦~ 本站即日起至7月8日停止维护o.o\n"
+      + "当前：" + final.toString());
+  }
+</script>
 <div class="hero-unit">
   <h1>这里啥都木有O(∩_∩）O~</h1>
   <p>本站已托管到 <a href="https://github.com/3013216027/blogme"> 我的github </a>上！祝泥有个好心情>_O</p>
