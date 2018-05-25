@@ -43,6 +43,5 @@ by default, some log would be written into a file named 'nohup.out' if you run c
 ##3. Have Fun!
 Now you can visit http://yourvpsIP or http://127.0.0.1/ (localhost, only in your own computer) to test it!
 
-For any question, connact with zhengdongjian2013@gmail.com
 
 ^
